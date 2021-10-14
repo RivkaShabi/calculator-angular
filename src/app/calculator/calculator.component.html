@@ -1,0 +1,11 @@
+<div class="calculator">
+    <div class="row">
+        <div class="col">
+            <div class="calculator-screen" [ngClass]="{'red': flagColor}">{{left}}{{tav}}{{right}}</div>
+        </div>
+    </div>
+    <div (click)="clickBtn($event)">
+        <button class="btn" *ngFor="let i of tavim">{{i}}</button>
+    </div>
+    <button class="btnC" (click)="clean()">c</button>
+</div>
